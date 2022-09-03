@@ -1,0 +1,124 @@
+*.html{
+    height: 100%;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:  sans-serif,Arial, Helvetica;
+}
+::selection{
+    color:#10001f;
+}
+.background{
+    background:linear-gradient(#200016,#10001f);
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    margin: 2rem;
+    height: 2rem;
+    width: 95%;
+    z-index: 100;
+    .left img{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border:0.5rem solid pink;
+        margin-left: -1rem;
+    }
+    .right{
+        
+        margin-right: 1rem;
+        margin-right: 3rem;
+    }
+    .right img{
+        height: 2.8rem;
+        width: 2.8rem;
+        border-radius: 35%;
+        margin-left: 0.3rem;
+        
+        border:0.2rem solid pink;
+    }
+}
+.image {
+    position: relative;
+    height: 100vh;
+    width:100%;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    #moon{
+        mix-blend-mode: screen;
+        transform:translateY(170px) 
+    }
+}
+.game{
+    position: relative;
+    transform: translateY(-55rem);
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 6rem;
+        width:6rem;
+        border-radius: 50%;
+        border:4px solid mediumvioletred ;
+        margin-right: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    p{
+        margin-top: -4px;
+        font-size: 5rem;
+        font-family: sans-serif;
+        font-style: italic;
+        color:pink;
+        text-shadow: 0px 5px 80px white;
+    }
+    #h{
+        margin-bottom: 3rem;
+        font-size:xx-large;
+        text-shadow:2px 2px 3px pink;
+        font-style:italic ;
+        font-family:serif;
+        word-spacing:17px;
+        letter-spacing:-1px;
+    }
+    span{
+        color: yellow;
+        margin-top: -2px;
+        font-size: 3rem;
+        font-family: serif;
+        font-style: italic;
+        text-shadow: 0px 0px 50px white;
+    }
+}
+@media (max-width:600px){
+    .game{
+        transform: translateY(-57rem);
+        img{
+            height: 4rem;
+            width:4rem;
+            border-radius: 50%;
+            border:4px solid mediumvioletred ;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        p{
+            margin-top: 4rem;
+            font-size: 4rem;
+        }
+}
+}
