@@ -19,7 +19,13 @@ else{
     document.querySelector(".background").style.background="linear-gradient(#376281,#10001f)";
     document.getElementById("moon").style.visibility="hidden";   
 }
-// --------------------game  algorism----------------------------------------        
+// --------------------game  algorism----------------------------------------
+let cur_img = document.getElementsByTagName("img");
+function no_press(cur_img){
+    if(cur_img.src="images/lose.jpg"){
+        cur_img.onclick=null;
+    }
+}
 sol=parseInt(Math.random()*16)+1;
 trying=5;
 win=false;
@@ -36,6 +42,7 @@ function change(cur_img)
     }
     else
     {
+        no_press(cur_img);
         cur_img.src="images/lose.jpg";
         trying--;
         document.getElementById("res").textContent=trying; 
